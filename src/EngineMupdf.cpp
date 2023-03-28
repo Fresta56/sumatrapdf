@@ -52,6 +52,63 @@ constexpr i64 kMaxMemoryFileSize = 32 * 1024 * 1024;
 extern "C" void drop_cached_fonts_for_ctx(fz_context*);
 extern "C" void pdf_install_load_system_font_funcs(fz_context* ctx);
 
+static CRITICAL_SECTION gMutexes[FZ_LOCK_MAX];
+static fz_locks_context g_fz_locks_ctx;
+static fz_context* gCtx = nullptr;
+
+static void fz_lock_context_cs(void* user, int lock) {
+    EnterCriticalSection(&gMutexes[lock]);
+}
+
+static void fz_unlock_context_cs(void* user, int lock) {
+    LeaveCriticalSection(&gMutexes[lock]);
+}
+
+static void fz_print_cb(void* user, const char* msg) {
+    if (!str::EndsWith(msg, "\n")) {
+        msg = str::JoinTemp(msg, "\n");
+    }
+    log(msg);
+}
+
+static void InstallFitzErrorCallbacks(fz_context* ctx) {
+    fz_set_warning_callback(ctx, fz_print_cb, nullptr);
+    fz_set_error_callback(ctx, fz_print_cb, nullptr);
+}
+
+/* we have one global context that is used to create other contexts by cloning.
+   this is how apparently it needs to be done. in the past we were fz_new_context
+   for each document and because of that we had to add our own lock for each thread
+   and fix multi-threading of jpx and harfbuzz.
+*/
+static fz_context* NewContext() {
+    if (gCtx) {
+        return fz_clone_context(gCtx);
+    }
+    for (size_t i = 0; i < dimof(gMutexes); i++) {
+        InitializeCriticalSection(&gMutexes[i]);
+    }
+    g_fz_locks_ctx.user = nullptr; // TODO: could be &gMutexes
+    g_fz_locks_ctx.lock = fz_lock_context_cs;
+    g_fz_locks_ctx.unlock = fz_unlock_context_cs;
+
+    gCtx = fz_new_context(nullptr, &g_fz_locks_ctx, FZ_STORE_DEFAULT);
+    InstallFitzErrorCallbacks(gCtx);
+
+    pdf_install_load_system_font_funcs(gCtx);
+    fz_register_document_handlers(gCtx);
+
+    return fz_clone_context(gCtx);
+}
+
+// TODO: call this on exit
+void DestroyGlobalContext() {
+    for (size_t i = 0; i < dimof(gMutexes); i++) {
+        LeaveCriticalSection(&gMutexes[i]);
+        DeleteCriticalSection(&gMutexes[i]);
+    }
+}
+
 static AnnotationType AnnotationTypeFromPdfAnnot(enum pdf_annot_type tp) {
     return (AnnotationType)tp;
 }
@@ -1404,47 +1461,18 @@ struct PageTreeStackItem {
     }
 };
 
-static void fz_lock_context_cs(void* user, int lock) {
-    EngineMupdf* e = (EngineMupdf*)user;
-    EnterCriticalSection(&e->mutexes[lock]);
-}
-
-static void fz_unlock_context_cs(void* user, int lock) {
-    EngineMupdf* e = (EngineMupdf*)user;
-    LeaveCriticalSection(&e->mutexes[lock]);
-}
-
-static void fz_print_cb(void* user, const char* msg) {
-    if (!str::EndsWith(msg, "\n")) {
-        msg = str::JoinTemp(msg, "\n");
-    }
-    log(msg);
-}
-
-static void InstallFitzErrorCallbacks(fz_context* ctx) {
-    fz_set_warning_callback(ctx, fz_print_cb, nullptr);
-    fz_set_error_callback(ctx, fz_print_cb, nullptr);
-}
-
 EngineMupdf::EngineMupdf() {
     kind = kindEngineMupdf;
     defaultExt = str::Dup(".pdf");
     fileDPI = 72.0f;
 
-    for (size_t i = 0; i < dimof(mutexes); i++) {
-        InitializeCriticalSection(&mutexes[i]);
-    }
+    ctx = NewContext();
     InitializeCriticalSection(&pagesAccess);
-    ctxAccess = &mutexes[FZ_LOCK_ALLOC];
-
-    fz_locks_ctx.user = this;
-    fz_locks_ctx.lock = fz_lock_context_cs;
-    fz_locks_ctx.unlock = fz_unlock_context_cs;
-    ctx = fz_new_context(nullptr, &fz_locks_ctx, FZ_STORE_DEFAULT);
-    InstallFitzErrorCallbacks(ctx);
-
-    pdf_install_load_system_font_funcs(ctx);
-    fz_register_document_handlers(ctx);
+    // TODO: separate lock and eventually use fz_clone_context for thread
+    // maybe have Ctx() function that lazily creates a thread-local context
+    // instead of storing it as part of EnibneMupdf
+    // also needs a way to notify thread is ending to drop the lock
+    ctxAccess = &pagesAccess;
 }
 
 EngineMupdf::~EngineMupdf() {
@@ -1485,10 +1513,6 @@ EngineMupdf::~EngineMupdf() {
     delete tocTree;
     DeleteVecMembers(pages);
 
-    for (size_t i = 0; i < dimof(mutexes); i++) {
-        LeaveCriticalSection(&mutexes[i]);
-        DeleteCriticalSection(&mutexes[i]);
-    }
     LeaveCriticalSection(&pagesAccess);
     DeleteCriticalSection(&pagesAccess);
 }

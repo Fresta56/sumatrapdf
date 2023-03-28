@@ -81,10 +81,7 @@ class EngineMupdf : public EngineBase {
     CRITICAL_SECTION* ctxAccess;
     CRITICAL_SECTION pagesAccess;
 
-    CRITICAL_SECTION mutexes[FZ_LOCK_MAX];
-
     fz_context* ctx = nullptr;
-    fz_locks_context fz_locks_ctx;
     int displayDPI{96};
     fz_document* _doc = nullptr;
     pdf_document* pdfdoc = nullptr;
