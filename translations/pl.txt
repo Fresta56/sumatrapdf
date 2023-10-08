@@ -1,16 +1,17 @@
 :%s annotation. Ctrl+click to edit.
+%s adnotacja. Ctrl+kliknięcie, aby edytować.
 :&About
-&O programie SumatraPDF
+&O SumatraPDF
 :&Actual Size
-&Rozmiar rzeczywisty
+&Aktualny rozmiar
 :&Advanced Options...
 Opcje &zaawansowane...
 :&All selected pages
-&Zaznaczone strony
+&Wszystkie wybrane strony
 :&Back
 &Wstecz
 :&Book View
-Widok o&dczytu
+&Widok książki
 :&Cancel
 &Anuluj
 :&Caret
@@ -18,7 +19,7 @@ Widok o&dczytu
 :&Close
 &Zamknij
 :&Continue installing 32-bit version
-&Kontynuuj instalację wersji 32-bitowej
+&Kontynuuj instalację wersji 32-bit
 :&Copy Selection
 Kopiuj &zaznaczenie
 :&Copy To Clipboard
@@ -28,13 +29,13 @@ O&drzuć zmiany
 :&Don't ask me again
 &Nie pytaj więcej
 :&Even pages only
-Strony &parzyste
+Tylko strony &parzyste
 :&Facing
 &Wiele stron
 :&File
 &Plik
 :&Find what:
-&Szukaj:
+&Znajdź:
 :&First Page
 &Pierwsza strona
 :&Fit pages to printable area
@@ -62,7 +63,7 @@ Instrukcja o&bsługi
 :&No
 &Nie
 :&Odd pages only
-Strony &nieparzyste
+Tylko strony &nieparzyste
 :&Open Document
 &Otwórz dokument
 :&Open...
@@ -82,17 +83,17 @@ Strony &nieparzyste
 :&Print... (denied)
 &Drukuj... (odmówiono)
 :&Remember the password for this document
-Pamiętaj &hasło dla tego dokumentu
+Zapamiętaj &hasło dla tego dokumentu
 :&Remember these settings for each document
-Pamiętaj ustawienia dla &każdego dokumentu
+Zapamiętaj ustawienia dla &każdego dokumentu
 :&Remove From History
 &Usuń z historii
 :&Save As...
 Zapisz &jako...
 :&Save to existing PDF
-&Zapisz w istniejącym pliku PDF
+&Zapisz do istniejącego pliku PDF
 :&Search With Google
-&Szukaj za pomocą Google
+&Szukaj z Google
 :&Settings
 &Ustawienia
 :&Shrink pages to printable area (if necessary)
@@ -108,7 +109,7 @@ Pie&częć
 :&Theme
 &Motyw
 :&Translate With Google
-&Tłumacz za pomocą Google
+&Tłumacz z Google
 :&Underline
 &Podkreślenie
 :&Use original page sizes
@@ -126,13 +127,13 @@ Po&większenie
 :(page %s)
 (strona %s)
 :About SumatraPDF
-O programie SumatraPDF
+O SumatraPDF
 :Add Favorite
-Dodaj do ulubionych
+Dodaj ulubione
 :Add page %s to favorites
 Dodaj stronę %s do ulubionych
 :Add page %s to favorites with (optional) name:
-Dodaj stronę %s do ulubionych pod (opcjonalną) nazwą:
+Dodaj stronę %s do ulubionych z (opcjonalną) nazwą:
 :Add to favorites
 Dodaj do ulubionych
 :Advanced
@@ -146,7 +147,7 @@ Adnotacje
 :Application:
 Program:
 :Are you sure you want to uninstall SumatraPDF?
-Czy na pewno chcesz usunąć SumatraPDF?
+Czy na pewno chcesz odinstalować SumatraPDF?
 :Associate with PDF files?
 Skojarzyć z plikami PDF?
 :Attachment: %s
@@ -156,17 +157,17 @@ Autor:
 :Author: %s
 Autor: %s
 :Automatic
-Automatyczny
+Automatycznie
 :Automatically check for &updates
 &Szukaj aktualizacji automatycznie
 :Background Color:
 Kolor tła:
 :Book View
-Widok odczytu
+Widok książki
 :Bookmark Shortcuts
-Zakładki
+Skróty zakładek
 :Bookmark shortcut to page %s of %s
-Wstaw zakładkę do strony %s z %s
+Skrót zakładki do strony %s z %s
 :Bookmarks
 Zakładki
 :Border: %d
@@ -180,19 +181,19 @@ Nie można połączyć z Internetem (błąd %#x).
 :Cancel
 Anuluj
 :Cannot print this file
-Nie można drukować tego pliku
+Nie można wydrukować tego pliku
 :Cannot start inverse search command. Please check the command line in the settings.
 Nie można rozpocząć odwrotnego wyszukiwania. Proszę sprawdzić ustawienia wiersza poleceń.
 :Change Language
-Zmień język (Change Language)
+Zmień język
 :Check for &Updates
-Szukaj &aktualizacji
+Sprawdź &aktualizacje
 :Checking for update...
-Szukanie aktualizacji...
+Sprawdzanie aktualizacji...
 :Circle
 Okrąg
 :Cleared history of %d files, deleted thumbnails.
-Wyczyszczono historię %d plików, usunięto miniatury.
+Wyczyszczono historię z %d plików, usunięto miniatury.
 :Clearing history...
 Czyszczenie historii...
 :Close
@@ -210,7 +211,7 @@ Komiksy
 :Command Palette
 Paleta poleceń
 :Compatibility
-Zgodność
+Kompatybilność
 :Contents:
 Zawartość:
 :Continuous
@@ -220,11 +221,11 @@ Widok odczytu - układ ciągły
 :Continuous Facing
 Wiele stron - układ ciągły
 :Contribute Translation
-Dodaj swoje tłumaczenie
+Współtwórz tłumaczenie
 :Copy &Image
 Kopiuj o&braz
 :Copy &Link Address
-Kopiuj adres z &odnośnika
+Kopiuj adres &linku
 :Copy Co&mment
 Kopiuj ko&mentarz
 :Copy File Path
@@ -232,7 +233,7 @@ Kopiuj ścieżkę pliku
 :Copy To Clipboard
 Kopiuj do schowka
 :Copying text was denied (copying as image only)
-Nie można kopiować tekstu (można kopiować jako obrazy)
+Nie można kopiować tekstu (kopiowanie tylko jako obraz)
 :Copyright:
 Prawo autorskie:
 :Could not obtain Printer properties
@@ -246,17 +247,17 @@ Nie można zainicjować drukarki
 :Couldn't install PDF previewer
 Nie można zainstalować podglądu PDF
 :Couldn't install PDF search filter
-Nie można zainstalować filtru przeszukiwania PDF
+Nie można zainstalować filtru wyszukiwania PDF
 :Couldn't render the page
 Nie można wyświetlić strony
 :Couldn't uninstall PDF previewer
-Nie można usunąć podglądu PDF
+Nie można odinstalować podglądu PDF
 :Couldn't uninstall Sumatra search filter
 Nie można odinstalować filtru wyszukiwania Sumatry
 :Couldn't uninstall browser plugin
-Nie można usunąć wtyczki do przeglądarek
+Nie można odinstalować wtyczki przeglądarki
 :Couldn't write %s to disk
-Nie można zapisać %s na dysk
+Nie można zapisać %s na dysku
 :Create Annotation &Under Cursor
 Utwórz adnotację &pod kursorem
 :Create Annotation From Selection
@@ -268,7 +269,7 @@ Bieżący plik
 :Cursor position:
 Pozycja kursora:
 :Custom &Zoom...
-&Własne powiększenie...
+&Powiększenie niestandartowe...
 :Dark
 Ciemny
 :Darker
@@ -282,7 +283,7 @@ Domyślne &powiększenie:
 :Delete Annotation
 Usuń adnotację
 :Denied Permissions:
-Brak zezwoleń:
+Odmowa uprawnień:
 :DjVu documents
 Dokumenty DjVu
 :Document Properties
@@ -296,19 +297,19 @@ Pobierz wersję 64-bitową
 :E&xit Fullscreen
 W&yjdź z trybu pełnoekranowego
 :EPUB ebooks
-Dokumenty EPUB
+E-booki EPUB
 :Edit %s Annotation
 Edytuj adnotację %s
 :Edit Annotations
 Edytuj adnotacje
 :Enter password
-Podaj hasło
+Wprowadź hasło
 :Enter password for %s
-Podaj hasło dla %s
+Wprowadź hasło dla %s
 :Enter the command-line to invoke when you double-click on the PDF document:
-Podaj polecenie wykonywane po dwukrotnym kliknięciu pliku PDF:
+Wprowadź wiersz poleceń, który ma zostać wywołany po dwukrotnym kliknięciu dokumentu PDF:
 :Error loading %s
-Błąd ładowania pliku %s
+Błąd ładowania %s
 :Expand All
 Rozwiń wszystko
 :F&avorites
@@ -326,11 +327,11 @@ Błąd zmiany nazwy pliku!
 :Failed to save a file
 Błąd zapisywania pliku
 :Failed to write the extended file extension information to the registry
-Nie można wprowadzić poszerzonych informacji o rozszerzeniu pliku do rejestru
+Nie udało się zapisać w rejestrze informacji o rozszerzonym rozszerzeniu pliku
 :Failed to write the uninstallation information to the registry
-Nie można zapisać informacji o usunięciu programu do rejestru
+Nie można zapisać informacji o dezinstalacji w rejestrze
 :Fast Web View
-Szybkie wyświetlanie w Internecie
+Szybki podgląd w Internecie
 :Favorites
 Ulubione
 :FictionBook documents
@@ -338,7 +339,7 @@ Dokumenty FictionBook
 :File %s not found
 Nie znaleziono pliku %s
 :File Attachment
-Załącznik
+Załącznik pliku
 :File Size:
 Rozmiar pliku:
 :File:
@@ -354,17 +355,17 @@ Znajdź poprzedni
 :Find:
 Znajdź:
 :Fit &Content
-Dopasuj do &zawartości
+Dopasuj &zawartość
 :Fit &Page
-Dopasuj do s&trony
+Dopasuj s&tronę
 :Fit &Width
-Dopasuj do sz&erokości
+Dopasuj sz&erokość
 :Fit Content
-Dopasuj do zawartości strony
+Dopasuj zawartość
 :Fit Page
-Dopasuj do całej strony
+Dopasuj stronę
 :Fit Width
-Dopasuj szerokości strony
+Dopasuj szerokość
 :Fit Width and Show Pages Continuously
 Dopasuj szerokość i wyświetlaj strony w układzie ciągłym
 :Fit a Single Page
@@ -374,9 +375,9 @@ Czcionki:
 :Found text at page %s
 Znaleziono tekst na stronie %s
 :Found text at page %s (again)
-Znaleziono tekst na stronie %s (znowu)
+Znaleziono tekst na stronie %s (ponownie)
 :Frequently Read
-Ostatnio otwierane
+Często czytane
 :GB
 GB
 :Get Fonts Info
@@ -386,9 +387,9 @@ Idź do strony
 :Hide &Options
 Ukryj &opcje
 :Hide frequently read
-Ukryj ostatnio otwierane
+Ukryj ostatnio czytane
 :Hint: Use the F3 key for finding again
-Wskazówka: użyj klawisza F3, aby szukać dalej
+Wskazówka: użyj klawisza F3, aby ponownie wyszukać
 :Icon:
 Ikona:
 :Image files (*.%s)
@@ -408,17 +409,17 @@ Zainstaluj dla wszystkich użytkowników
 :Installation failed!
 Błąd instalacji!
 :Installation in progress...
-Trwa instalacja...
+Postęp instalacji...
 :Installing 32-bit SumatraPDF on 64-bit OS
-Instalowanie 32-bitowego programu SumatraPDF w 64-bitowym systemie operacyjnym
+Instalowanie 32-bit SumatraPDF w 64-bit systemie operacyjnym
 :Interior Color:
 Kolor wnętrza:
 :KB
 KB
 :Let Windows Desktop Search &search PDF documents
-Wyszukiwanie z pulpitu systemu Windows ma &przeszukiwać pliki PDF
+Pozwól Windows Desktop Search & przeszukiwać dokumenty PDF
 :Let Windows show &previews of PDF documents
-Windows ma pokazywać &podgląd plików PDF
+Pozwól Windows wyświetlać &podglądy dokumentów PDF
 :Light
 Jasny
 :Line
@@ -432,7 +433,7 @@ Początek linii:
 :MB
 MB
 :Make SumatraPDF default application for PDF files?
-Ustawić program SumatraPDF jako domyślną przeglądarkę plików PDF?
+Ustawić SumatraPDF jako domyślną aplikację plików PDF?
 :Man&ga Mode
 Tryb &mangi
 :Match Case
@@ -448,21 +449,21 @@ Dostępna nowa wersja
 :Next Page
 Następna strona
 :No matches were found
-Nie znaleziono wyników
+Nie znaleziono żadnych dopasowań
 :No result found around line %u in file %s
-Nie znaleziono wyników w okolicach wiersza %u w pliku %s
+Nie znaleziono wyniku wokół linii %u w pliku %s
 :No synchronization file found
 Nie znaleziono pliku synchronizacji
 :No synchronization info at this position
-Brak informacji o synchronizacji w tej pozycji
+Brak informacji o synchronizacji na tej pozycji
 :Number of Pages:
 Liczba stron:
 :OK
 OK
 :Opacity:
-Nieprzezroczystość:
+Krycie:
 :Opacity: %d
-Nieprzezroczystość: %d
+Krycie: %d
 :Open
 Otwórz
 :Open &in PDF-XChange
@@ -500,7 +501,7 @@ Dokument PDF
 :PDF Optimizations:
 Optymalizacja PDF:
 :PDF Producer:
-Producent PDF:
+Twórca PDF:
 :PDF Version:
 Wersja PDF:
 :PDF documents
@@ -512,7 +513,7 @@ Strona %s
 :Page Size:
 Rozmiar strony:
 :Page number %u inexistant
-Brak strony o numerze %u
+Numer strony %u nie istnieje
 :Page scaling
 Skalowanie strony
 :Page:
@@ -526,7 +527,7 @@ Proszę czekać - ładowanie...
 :Please wait - rendering...
 Proszę czekać - renderowanie...
 :Poly Line
-Polilinia
+Łamana linia
 :Polygon
 Wielokąt
 :Popup: %d 0 R
@@ -540,11 +541,11 @@ Poprzednia strona
 :Print
 Drukuj
 :Print range
-Zakres druku
+Zakres drukowania
 :Printer with given name doesn't exist
 Drukarka o podanej nazwie nie istnieje
 :Printing in progress.
-Trwa drukowanie.
+Drukowanie w toku.
 :Printing is still in progress. Abort and quit?
 Nadal trwa drukowanie. Przerwać i wyjść?
 :Printing is still in progress. Abort and start over?
@@ -562,7 +563,7 @@ Prostokąt: x=%d y=%d dx=%d dy=%d
 :Redact
 Redaguj
 :Remember &opened files
-Pamiętaj &otwierane pliki
+Zapamiętaj &otwierane pliki
 :Remove from favorites
 Usuń z ulubionych
 :Remove page %s from favorites
@@ -574,7 +575,7 @@ Obróć w &lewo
 :Rotate &Right
 Obróć w &prawo
 :S&election
-Z&aznaczenie
+Z&aznacz
 :S&quiggly
 &Falowanie
 :SVG documents
@@ -594,15 +595,15 @@ Zapisz zmiany w nowym pliku PDF
 :Save changes to existing PDF
 Zapisz zmiany w istniejącym pliku PDF
 :Save to &new PDF
-Zapisz w &nowym pliku PDF
+Zapisz do &nowego pliku PDF
 :Saved annotations to '%s'
 Zapisano adnotacje w '%s'
 :Saving of '%s' failed with: '%s'
 Zapisywanie '%s' nie powiodło się z: '%s'
 :Search With &Bing
-Szukaj za pomocą &Bing
+Szukaj z &Bing
 :Search With &Google
-Szukaj za pomocą &Google
+Szukaj z &Google
 :Searching %d of %d...
 Szukanie %d z %d...
 :Select &All
@@ -610,11 +611,11 @@ Zaznacz &wszystko
 :Select content with Ctrl+left mouse button
 Zaznacz zawartość, wciskając Ctrl i lewy przycisk myszy
 :Select the folder where SumatraPDF should be installed:
-Wybierz folder, w którym należy zainstalować program SumatraPDF:
+Wybierz folder, w którym ma być zainstalowany SumatraPDF:
 :Selection:
-Zaznaczenie:
+Wybór:
 :Send by &E-mail...
-Dołącz do wiadomości &e-mail...
+Wyślij przez &e-mail...
 :Set inverse search command-line
 Ustaw wiersz poleceń do odwrotnego wyszukiwania
 :Show &Bookmarks
@@ -634,13 +635,13 @@ Pokaż ulubione
 :Show Scr&ollbars
 Pokaż p&aski przewijania
 :Show frequently read
-Pokaż często otwierane
+Pokaż często czytane
 :Show in &folder
 Pokaż w &folderze
 :Show in folder
 Pokaż w folderze
 :Show the &bookmarks sidebar when available
-Pokaż panel za&kładek, gdy są dostępne
+Pokaż pasek boczny za&kładek, gdy są dostępne
 :Single Page
 Pojedyncza strona
 :Skip this version
@@ -658,7 +659,7 @@ Temat:
 :SumatraPDF %s Installer
 Instalator SumatraPDF %s
 :SumatraPDF %s Uninstaller
-Usuń SumatraPDF %s
+Odinstaluj SumatraPDF %s
 :SumatraPDF Options
 Opcje SumatraPDF
 :SumatraPDF Update
@@ -672,7 +673,7 @@ Program SumatraPDF nie został znaleziony.
 :Synchronization file cannot be opened
 Nie można otworzyć pliku synchronizacji
 :Tagged PDF
-Tagowany plik PDF
+Tagowane PDF
 :Text Alignment:
 Wyrównanie tekstu:
 :Text Color:
@@ -682,7 +683,7 @@ Rozmiar tekstu:
 :Text Size: %d
 Rozmiar tekstu: %d
 :Text documents
-Pliki tekstowe
+Dokumenty tekstowe
 :Thank you for choosing SumatraPDF!
 Dziękujemy za wybór SumatraPDF!
 :Thank you! SumatraPDF has been installed.
@@ -694,13 +695,13 @@ Ten dokument używa niewspieranych funkcji (%s) i może wyświetlać się niepop
 :Title:
 Tytuł:
 :Translate with &DeepL
-Tłumacz za pomocą &DeepL
+Tłumacz z &DeepL
 :Uninstall SumatraPDF
-Usuń SumatraPDF
+Odinstaluj SumatraPDF
 :Uninstallation failed
-Usunięcie programu nie powiodło się
+Dezinstalacja nie powiodła się
 :Uninstallation in progress...
-Trwa usuwanie...
+Dezinstalacja w toku...
 :Unknown source file (%s)
 Nieznany plik źródłowy (%s)
 :Unsaved annotations
@@ -708,7 +709,7 @@ Niezapisane adnotacje
 :Unsaved annotations in '%s'
 Niezapisane adnotacje w '%s'
 :Use &tabs
-Włącz wyświetlanie &kart
+Użyj &karty
 :View
 Widok
 :Visit &Website
@@ -716,7 +717,7 @@ Odwiedź &stronę internetową
 :Warning
 Uwaga
 :XPS documents
-Pliki XPS
+Dokumenty XPS
 :You have the latest version.
 Masz najnowszą wersję.
 :You have unsaved annotations
@@ -726,7 +727,7 @@ Masz wersję '%s', a dostępna jest wersja '%s'.\nCzy chcesz zainstalować nową
 :You're installing 32-bit SumatraPDF on 64-bit OS.\nWould you like to download\n64-bit version?
 Instalujesz 32-bitowy program SumatraPDF w 64-bitowym systemie operacyjnym.\nCzy chcesz pobrać\nwersję 64-bitową?
 :Zoom
-Powiększ
+Powiększanie
 :Zoom In
 Powiększ
 :Zoom Out
